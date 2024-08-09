@@ -19,6 +19,7 @@ function App() {
         <MyProjects />
         <Contact />
       </Container>
+      <Footer />
     </>
   )
 }
