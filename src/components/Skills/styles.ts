@@ -11,7 +11,7 @@ const scroll = keyframes`
 `
 
 export const SkillsContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 40px;
 `
 
 export const Title = styled.h1`
@@ -25,13 +25,13 @@ export const CarouselContainer = styled.div`
   white-space: nowrap;
   width: 100%;
   background-color: ${colors.lightGray};
-  margin-bottom: 24px; xc
+  margin-bottom: 24px;
 `
 
 export const CarouselTrack = styled.div`
   display: inline-block;
   width: 100%;
-  animation: ${scroll} 10s linear infinite;
+  animation: ${scroll} 20s linear infinite;
   will-change: transform;
 `
 
@@ -44,43 +44,45 @@ export const CarouselItem = styled.div`
   }
 `
 
-export const ContainerTeste = styled.div`
+export const ContainerGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
+  max-height: 240px;
+  flex-wrap: wrap;
 `
 
 export const HardSkillContainer = styled.div`
   display: block;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 16px;
+  padding: 0 16px;
+  height: 100%;
+
+  Button {
+    width: 100%;
+    font-size: 16px;
+    border-radius: 0px;
+    margin-top: 8px;
+  }
 `
 
-export const Skill = styled.div`
-  width: 100%;
-  max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+export const SkillItem = styled.div`
+  justify-content: center;
 `
 
-export const SkillTitle = styled.h4`
+export const SkillTitle = styled.h2`
   text-align: center;
   margin-bottom: 8px;
 `
 
-export const SkillName = styled.h2`
+export const SkillName = styled.h4`
   font-size: 14px;
-  text-align: left;
-  margin-right: 8px;
 `
 
 export const SkillBar = styled.div`
-  width: 100%;
   margin-bottom: 8px;
   height: 14px;
   background-color: ${colors.lightGray};
-  border-radius: 5px;
-  flex-grow: 1;
+  border-radius: 8px;
 `
 
 export const SkillPer = styled.div.attrs<SkillPerProps>((props) => ({
@@ -90,10 +92,8 @@ export const SkillPer = styled.div.attrs<SkillPerProps>((props) => ({
 }))<SkillPerProps>`
   height: 100%;
   display: block;
-  border-radius: 5px;
-  position: relative;
+  border-radius: 8px;
   background-color: ${colors.green};
-  overflow: hidden;
 `
 
 export const SkillTooltip = styled.span`
@@ -101,44 +101,17 @@ export const SkillTooltip = styled.span`
   font-size: 12px;
   font-weight: bold;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 0 auto;
 `
 
 export const SoftSkillsContainer = styled.div`
   background-color: #eee;
   border-radius: 25px;
-  padding: 16px;
-
-  h2 {
-    text-align: center;
-    font-size: 16px;
-  }
+  margin-bottom: 23px;
 
   p {
     text-align: center;
     font-size: 14px;
+    margin: 8px;
   }
-`
-
-export const SkillComportamental = styled.div`
-  background-color: #ccc;
-  border-radius: 18px;
-  padding: 8px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-
-  img {
-    height: 160px;
-  }
-
-  div {
-    display: block;
-  }
-`
-
-export const SkillComportamentalName = styled.div`
-  color: #000;
-  text-align: center;
 `

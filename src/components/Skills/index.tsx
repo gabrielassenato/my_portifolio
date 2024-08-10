@@ -5,17 +5,19 @@ import {
   Title,
   SkillsContainer,
   SkillName,
-  Skill,
   SkillBar,
   SkillPer,
   SkillTooltip,
   SkillTitle,
   HardSkillContainer,
-  ContainerTeste,
   SoftSkillsContainer,
-  SkillComportamental,
-  SkillComportamentalName
+  ContainerGrid,
+  SkillItem
 } from './styles'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
+import { Carousel } from '../CarouselSkills'
 
 import logo1 from '../../assets/logo_babel.png'
 import logo2 from '../../assets/logo_bootstrap.png'
@@ -30,6 +32,28 @@ import logo10 from '../../assets/logo_react.png'
 import logo11 from '../../assets/logo_sass.png'
 import logo12 from '../../assets/logo_vuejs.png'
 import comunication from '../../assets/comunication.png'
+import { Button } from '../../styles'
+
+const skillsComportamentais = [
+  {
+    title: 'Comunicação',
+    description:
+      'Como já fui vendedor e tatuador, sempre precisei me comunicar bem para deixar claro as qualidades e minhas ideias relacionadas aos projetos e também conseguir captar a idéia dos clientes.',
+    imgSrc: comunication
+  },
+  {
+    title: 'Visão',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus amet officia ullam voluptatum fugit et delectus, ratione assumenda ex similique dolorum officiis ipsa, facere ipsam minus aliquam cum natus. Quibusdam.',
+    imgSrc: comunication
+  },
+  {
+    title: 'Ética',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus amet officia ullam voluptatum fugit et delectus, ratione assumenda ex similique dolorum officiis ipsa, facere ipsam minus aliquam cum natus. Quibusdam.',
+    imgSrc: comunication
+  }
+]
 
 const logos = [
   logo1,
@@ -61,85 +85,77 @@ export const Skills = () => {
           ))}
         </CarouselTrack>
       </CarouselContainer>
-      <ContainerTeste>
+      <ContainerGrid>
         <HardSkillContainer>
           <SkillTitle>Tecnicas</SkillTitle>
-          <Skill>
-            <SkillName>JavaScript</SkillName>
-            <SkillBar>
-              <SkillPer per="50%">
-                <SkillTooltip>50%</SkillTooltip>
-              </SkillPer>
-            </SkillBar>
-          </Skill>
-          <Skill>
-            <SkillName>CSS</SkillName>
-            <SkillBar>
-              <SkillPer per="90%">
-                <SkillTooltip>90%</SkillTooltip>
-              </SkillPer>
-            </SkillBar>
-          </Skill>
-          <Skill>
-            <SkillName>HTML</SkillName>
-            <SkillBar>
-              <SkillPer per="50%">
-                <SkillTooltip>50%</SkillTooltip>
-              </SkillPer>
-            </SkillBar>
-          </Skill>
-          <Skill>
-            <SkillName>REACT</SkillName>
-            <SkillBar>
-              <SkillPer per="90%">
-                <SkillTooltip>90%</SkillTooltip>
-              </SkillPer>
-            </SkillBar>
-          </Skill>
-          <Skill>
-            <SkillName>NODEJS</SkillName>
-            <SkillBar>
-              <SkillPer per="90%">
-                <SkillTooltip>90%</SkillTooltip>
-              </SkillPer>
-            </SkillBar>
-          </Skill>
-          <Skill>
-            <SkillName>Bootstrap</SkillName>
-            <SkillBar>
-              <SkillPer per="90%">
-                <SkillTooltip>90%</SkillTooltip>
-              </SkillPer>
-            </SkillBar>
-          </Skill>
-          <Skill>
-            <SkillName>Babel</SkillName>
-            <SkillBar>
-              <SkillPer per="90%">
-                <SkillTooltip>90%</SkillTooltip>
-              </SkillPer>
-            </SkillBar>
-          </Skill>
-          <button>Como adquiri esses conhecimentos?</button>
+          <SkillItem>
+            <ContainerGrid>
+              <SkillName>JavaScript</SkillName>
+              <SkillBar>
+                <SkillPer per="50%">
+                  <SkillTooltip>50%</SkillTooltip>
+                </SkillPer>
+              </SkillBar>
+            </ContainerGrid>
+            <ContainerGrid>
+              <SkillName>CSS</SkillName>
+              <SkillBar>
+                <SkillPer per="90%">
+                  <SkillTooltip>90%</SkillTooltip>
+                </SkillPer>
+              </SkillBar>
+            </ContainerGrid>
+            <ContainerGrid>
+              <SkillName>HTML</SkillName>
+              <SkillBar>
+                <SkillPer per="50%">
+                  <SkillTooltip>50%</SkillTooltip>
+                </SkillPer>
+              </SkillBar>
+            </ContainerGrid>
+            <ContainerGrid>
+              <SkillName>REACT</SkillName>
+              <SkillBar>
+                <SkillPer per="90%">
+                  <SkillTooltip>90%</SkillTooltip>
+                </SkillPer>
+              </SkillBar>
+            </ContainerGrid>
+            <ContainerGrid>
+              <SkillName>NODEJS</SkillName>
+              <SkillBar>
+                <SkillPer per="90%">
+                  <SkillTooltip>90%</SkillTooltip>
+                </SkillPer>
+              </SkillBar>
+            </ContainerGrid>
+            <ContainerGrid>
+              <SkillName>Bootstrap</SkillName>
+              <SkillBar>
+                <SkillPer per="90%">
+                  <SkillTooltip>90%</SkillTooltip>
+                </SkillPer>
+              </SkillBar>
+            </ContainerGrid>
+            <ContainerGrid>
+              <SkillName>Babel</SkillName>
+              <SkillBar>
+                <SkillPer per="90%">
+                  <SkillTooltip>90%</SkillTooltip>
+                </SkillPer>
+              </SkillBar>
+            </ContainerGrid>
+          </SkillItem>
+          <Button>Como adquiri esses conhecimentos?</Button>
         </HardSkillContainer>
         <SoftSkillsContainer>
-          <h2>Comportamentais</h2>
+          <SkillTitle>Comportamentais</SkillTitle>
           <p>
             Durante minha trajetória como autônomo desenvolvi algumas softskills
           </p>
-          <SkillComportamental>
-            <img src={comunication} alt="" />
-            <div>
-              <SkillComportamentalName>Comunicação: </SkillComportamentalName>
-              <p>
-                Como já fui vendedor e tatuador, sempre precisei me comunicar
-                bem para deixar claro as qualidades e minhas ideias relacionadas
-                aos projetos e também conseguir captar a idéia dos clientes.
-              </p>
-            </div>
-          </SkillComportamental>
+          <Carousel items={skillsComportamentais} />
         </SoftSkillsContainer>
-      </ContainerTeste>
+      </ContainerGrid>
     </SkillsContainer>
   )
 }
