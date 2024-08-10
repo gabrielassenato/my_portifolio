@@ -26,6 +26,7 @@ export const Links = styled.ul`
   display: flex;
   text-decoration: none;
 `
+
 export const LinkItem = styled.li`
   margin-right: 16px;
 
