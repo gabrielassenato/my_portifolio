@@ -1,7 +1,9 @@
-import { Card, Text, Picture, Button } from './styles'
+import { Card, Text, Picture } from './styles'
 import graduated from '../../assets/graduated.png'
 import study from '../../assets/study.png'
 import soso from '../../assets/soso.png'
+import seeMore from '../../assets/add.png'
+import { Button } from '../../styles'
 
 export const About = () => (
   <Card>
@@ -25,9 +27,11 @@ export const About = () => (
         utilizar <span>SASS</span>, <span>Vue</span>, <span>Grunt</span> e
         outras tecnologias. Estou sempre em busca de aprimorar minhas
         habilidades e me manter atualizado com as tendências do mercado de{' '}
-        <span>desenvolvimento web</span>.
+        <span>desenvolvimento</span>.
       </p>
-      <Button>Saiba mais</Button>
+      <Button>
+        Saiba mais <img src={seeMore} alt="" />
+      </Button>
     </Text>
     <Picture />
   </Card>

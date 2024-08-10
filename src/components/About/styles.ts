@@ -5,7 +5,7 @@ import { colors } from '../../styles'
 
 export const Card = styled.div`
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.6fr 1fr;
   background-color: ${colors.lightGray};
   height: 280px;
   border-radius: 50px 0px 0px 0px;
@@ -53,18 +53,6 @@ export const Text = styled.div`
       font-weight: bold;
     }
   }
-`
-
-export const Button = styled.button`
-  background-color: ${colors.green};
-  color: ${colors.white};
-  font-size: 18px;
-  padding: 8px;
-  width: 200px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  margin: 0 auto;
 `
 
 export const Picture = styled.div`
