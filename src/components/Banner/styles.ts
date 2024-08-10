@@ -31,8 +31,8 @@ export const Content = styled.div`
 
   h2 {
     font-weight: normal;
-    font-size: 32px;
-    padding: 50px;
+    font-size: 28px;
+    padding: 40px;
   }
 
   span {
@@ -41,9 +41,14 @@ export const Content = styled.div`
   }
 
   p {
-    margin-left: 250px;
-    margin-top: 150px;
+    margin-left: 220px;
+    margin-top: 120px;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 26px;
+    text-align: right;
+
+    span {
+      font-size: 32px;
+    }
   }
 `

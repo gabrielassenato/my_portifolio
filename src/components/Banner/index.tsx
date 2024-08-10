@@ -10,7 +10,7 @@ export const Banner = () => (
         problemas reais.
       </h2>
       <p>
-        Desenvolvedor <br />
+        <span>Desenvolvedor</span> <br />
         Front-End <br />
         Back-End <br />
         Java
