@@ -24,3 +24,23 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
 `
+
+export const Button = styled.button`
+  background-color: ${colors.green};
+  color: ${colors.white};
+  font-size: 18px;
+  padding: 8px;
+  width: 200px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 24px;
+    margin-left: 6px;
+  }
+`
