@@ -1,8 +1,9 @@
-import { Card, Text, Picture } from './styles'
+import { Card, Text, Picture, Overlay } from './styles'
 import graduated from '../../assets/graduated.png'
 import study from '../../assets/study.png'
 import soso from '../../assets/soso.png'
 import seeMore from '../../assets/add.png'
+import play from '../../assets/play.png'
 import { Button } from '../../styles'
 
 export const About = () => (
@@ -33,6 +34,10 @@ export const About = () => (
         Saiba mais <img src={seeMore} alt="" />
       </Button>
     </Text>
-    <Picture />
+    <Picture>
+      <Overlay>
+        <img src={play} alt="" />
+      </Overlay>
+    </Picture>
   </Card>
 )

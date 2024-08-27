@@ -10,6 +10,7 @@ export const Card = styled.div`
   height: 280px;
   border-radius: 50px 0px 0px 0px;
   margin-top: 30px;
+  position: relative;
 `
 
 export const Text = styled.div`
@@ -59,4 +60,30 @@ export const Picture = styled.div`
   background-image: url(${Gabriel});
   background-size: cover;
   background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &:hover div {
+    opacity: 1;
+  }
+`
+
+export const Overlay = styled.div`
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 50px;
+  }
 `
