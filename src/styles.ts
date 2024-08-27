@@ -4,6 +4,7 @@ export const colors = {
   white: '#fff',
   black: '#000',
   green: '#60B98C',
+  darkGreen: '#4e956f',
   lightGray: '#D9D9D9',
   gray: '#CCCACA'
 }
@@ -38,6 +39,11 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    transition: background-color 1s ease-out;
+    background-color: ${colors.darkGreen};
+  }
 
   img {
     height: 24px;
