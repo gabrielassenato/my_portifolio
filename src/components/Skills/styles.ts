@@ -1,10 +1,6 @@
 import { keyframes, styled } from 'styled-components'
 import { colors } from '../../styles'
 
-interface SkillPerProps {
-  per: string
-}
-
 const scroll = keyframes`
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
@@ -47,8 +43,6 @@ export const CarouselItem = styled.div`
 export const ContainerGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
-  max-height: 240px;
-  flex-wrap: wrap;
 `
 
 export const HardSkillContainer = styled.div`
@@ -75,33 +69,14 @@ export const SkillTitle = styled.h2`
 `
 
 export const SkillName = styled.h4`
-  font-size: 14px;
-`
-
-export const SkillBar = styled.div`
+  font-size: 18px;
   margin-bottom: 8px;
-  height: 14px;
-  background-color: ${colors.lightGray};
-  border-radius: 8px;
 `
 
-export const SkillPer = styled.div.attrs<SkillPerProps>((props) => ({
-  style: {
-    maxWidth: props.per
-  }
-}))<SkillPerProps>`
-  height: 100%;
-  display: block;
-  border-radius: 8px;
-  background-color: ${colors.green};
-`
-
-export const SkillTooltip = styled.span`
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  display: flex;
+export const StarRatting = styled.div`
+  align-itens: center;
   justify-content: center;
+  margin: -2px auto;
 `
 
 export const SoftSkillsContainer = styled.div`
@@ -111,7 +86,7 @@ export const SoftSkillsContainer = styled.div`
 
   p {
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     margin: 8px;
   }
 `
