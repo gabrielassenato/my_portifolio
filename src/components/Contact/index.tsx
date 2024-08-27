@@ -11,12 +11,7 @@ export const Contact = () => (
     <LinksList>
       <LinksItem>
         <a href="#">
-          <img src={logoWhatsApp} alt="" />
-        </a>
-      </LinksItem>
-      <LinksItem>
-        <a href="#">
-          <img src={logoGmail} alt="" />
+          <img src={logoLinkedIn} alt="" />
         </a>
       </LinksItem>
       <LinksItem>
@@ -26,7 +21,12 @@ export const Contact = () => (
       </LinksItem>
       <LinksItem>
         <a href="#">
-          <img src={logoLinkedIn} alt="" />
+          <img src={logoGmail} alt="" />
+        </a>
+      </LinksItem>
+      <LinksItem>
+        <a href="#">
+          <img src={logoWhatsApp} alt="" />
         </a>
       </LinksItem>
     </LinksList>

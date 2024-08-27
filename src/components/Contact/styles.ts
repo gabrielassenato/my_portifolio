@@ -18,10 +18,15 @@ export const LinksList = styled.ul`
   margin: 42px;
 `
 
-export const LinksItem = styled.ul`
+export const LinksItem = styled.li`
   height: 100px;
   margin: 0 12px;
+  transition: transform 0.2s ease;
   img {
     height: 90px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 `
