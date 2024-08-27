@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Button } from '../../styles'
+import { useEffect, useState } from 'react'
 import prev from '../../assets/prev.png'
 import back from '../../assets/back.png'
 
@@ -10,7 +9,7 @@ import {
   Botoes
 } from './styles'
 
-interface CarouselProps {
+type CarouselProps = {
   items: {
     title: string
     description: string
@@ -18,8 +17,9 @@ interface CarouselProps {
   }[]
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ items }) => {
+export const CarouselSkills: React.FC<CarouselProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
@@ -33,8 +33,18 @@ export const Carousel: React.FC<CarouselProps> = ({ items }) => {
     )
   }
 
+  useEffect(() => {
+    if (!isHovered) {
+      const interval = setInterval(handleNext, 4000)
+      return () => clearInterval(interval)
+    }
+  }, [currentIndex, isHovered])
+
   return (
-    <CarouselContainer>
+    <CarouselContainer
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <CarouselTrack>
         <CarouselItem>
           <img src={items[currentIndex].imgSrc} alt="" />
