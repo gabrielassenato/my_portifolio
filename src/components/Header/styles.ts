@@ -7,6 +7,7 @@ export const HeaderBar = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   img {
     height: 72px;
   }
@@ -28,11 +29,20 @@ export const Links = styled.ul`
 `
 
 export const LinkItem = styled.li`
-  margin-right: 16px;
+  margin-right: 14px;
 
   a {
     color: ${colors.black};
     font-size: 24px;
+    text-align: center;
+    display: inline-block;
+    width: 130px;
+    transition: font-weight 0.2s ease, color 0.2s ease;
+  }
+
+  &:hover a {
+    font-weight: bold;
+    text-decoration: underline;
   }
 
   &:last-child {
