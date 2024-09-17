@@ -1,15 +1,39 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
+
+export const Links = styled.ul`
+  display: flex;
+  text-decoration: none;
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    margin-left: 0;
+    display: block;
+  }
+`
 
 export const HeaderBar = styled.header`
   background-color: ${colors.lightGray};
   padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   img {
     height: 72px;
+  }
+`
+
+export const HeaderRow = styled.div`
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: ${breakpoints.cellphone}) {
+      flex: 1;
+      justify-content: space-between;
+
+      ${Links} {
+        display: none;
+      }
+    }
   }
 `
 
@@ -21,11 +45,36 @@ export const Avatar = styled.div`
     margin-left: 16px;
     font-size: 32px;
   }
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    h1 {
+      display: none;
+    }
+  }
 `
 
-export const Links = styled.ul`
-  display: flex;
-  text-decoration: none;
+export const Burguer = styled.div`
+  width: 32px;
+
+  span {
+    height: 4px;
+    display: block;
+    width: 100%;
+    background-color: #000;
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: ${breakpoints.cellphone}) {
+    display: none;
+  }
+`
+
+export const NavMobile = styled.nav`
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
 `
 
 export const LinkItem = styled.li`
@@ -47,5 +96,16 @@ export const LinkItem = styled.li`
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    margin-right: 0;
+
+    a {
+      display: block;
+      padding: 8px 0;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 `
