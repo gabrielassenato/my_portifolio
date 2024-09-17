@@ -8,7 +8,7 @@ export const Card = styled.div`
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   background-color: ${colors.lightGray};
-  height: 280px;
+  height: 300px;
   border-radius: 50px 0px 0px 0px;
   margin-top: 30px;
   position: relative;
