@@ -20,6 +20,8 @@ type CarouselProps = {
     description: string
     imgSrcMockup: string
     imgSrcTecnology: string[]
+    linkToRepo: string
+    linkVisit: string
   }[]
 }
 
@@ -41,7 +43,7 @@ export const CarouselProjects: React.FC<CarouselProps> = ({ items }) => {
 
   useEffect(() => {
     if (!isHovered) {
-      const interval = setInterval(handleNext, 2000)
+      const interval = setInterval(handleNext, 3000)
       return () => clearInterval(interval)
     }
   }, [currentIndex, isHovered])
@@ -65,12 +67,24 @@ export const CarouselProjects: React.FC<CarouselProps> = ({ items }) => {
           <VisitTheProject>
             <h5>Visite o projeto:</h5>
             <div>
-              <Button>
-                Repositório <img src={githubLogo} alt="" />
-              </Button>
-              <Button>
-                Ver projeto <img src={vercelLogo} alt="" />
-              </Button>
+              <a
+                href={items[currentIndex].linkToRepo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button>
+                  Repositório <img src={githubLogo} alt="" />
+                </Button>
+              </a>
+              <a
+                href={items[currentIndex].linkVisit}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button>
+                  Ver projeto <img src={vercelLogo} alt="" />
+                </Button>
+              </a>
             </div>
           </VisitTheProject>
         </AboutProject>
