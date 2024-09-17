@@ -7,7 +7,7 @@ import play from '../../assets/play.png'
 import { Button } from '../../styles'
 
 export const About = () => (
-  <Card>
+  <Card id="about">
     <Text>
       <h2>
         Olá, eu sou Gabriel <img src={soso}></img>
@@ -23,12 +23,15 @@ export const About = () => (
         </li>
       </ul>
       <p>
-        Durante minha jornada, adquiri um sólido conhecimento em{' '}
-        <span>REACT</span> e <span>JavaScript</span>, além de aprender a
-        utilizar <span>SASS</span>, <span>Vue</span>, <span>Grunt</span> e
-        outras tecnologias. Estou sempre em busca de aprimorar minhas
-        habilidades e me manter atualizado com as tendências do mercado de{' '}
-        <span>desenvolvimento</span>.
+        Sou um desenvolvedor com experiência em <span>HTML</span>,{' '}
+        <span>CSS</span>, <span>Bootstrap</span> e <span>JavaScript</span>.
+        Utilizo <span>React</span> e <span>JQuery</span>, com conhecimento em{' '}
+        <span>Vue</span>, <span>TypeScript</span>, <span>C</span> e
+        pré-processadores como <span>SASS</span>. Uso ferramentas como{' '}
+        <span>Grunt</span>, <span>Gulp</span>, <span>Babel</span>, além de{' '}
+        <span>Node</span> e <span>Git</span> para gerenciar projetos. Estou
+        sempre buscando <span>aprimorar minhas habilidades</span> e me manter{' '}
+        <span>atualizado</span> com as tendências do mercado.{' '}
       </p>
       <Button>
         Saiba mais <img src={seeMore} alt="" />
