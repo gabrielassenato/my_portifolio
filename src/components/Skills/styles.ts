@@ -1,5 +1,5 @@
 import { keyframes, styled } from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 const scroll = keyframes`
   0% { transform: translateX(0); }
@@ -7,6 +7,7 @@ const scroll = keyframes`
 `
 
 export const SkillsContainer = styled.div`
+  scroll-margin-top: 40px;
   margin-top: 40px;
 `
 
@@ -43,13 +44,25 @@ export const CarouselItem = styled.div`
 export const ContainerGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    display: block;
+      .stars {
+        margin-bottom: 12px;
+        margin-left: 12px;
+      }
 `
 
 export const HardSkillContainer = styled.div`
   display: block;
   align-items: center;
-  padding: 0 16px;
+  padding-right: 16px;
   height: 100%;
+
+  div {
+    max-height: 220px;
+    overflow-y: auto;
+  }
 
   Button {
     width: 100%;
@@ -57,10 +70,30 @@ export const HardSkillContainer = styled.div`
     border-radius: 0px;
     margin-top: 8px;
   }
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    display: block;
+    padding: 16px;
+  }
+`
+
+export const ContainerGridHard = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 `
 
 export const SkillItem = styled.div`
   justify-content: center;
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    display: block;
+
+    div {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+  }
 `
 
 export const SkillTitle = styled.h2`
@@ -70,13 +103,7 @@ export const SkillTitle = styled.h2`
 
 export const SkillName = styled.h4`
   font-size: 18px;
-  margin-bottom: 8px;
-`
-
-export const StarRatting = styled.div`
-  align-itens: center;
-  justify-content: center;
-  margin: -2px auto;
+  margin-bottom: 12px;
 `
 
 export const SoftSkillsContainer = styled.div`
@@ -88,5 +115,23 @@ export const SoftSkillsContainer = styled.div`
     text-align: center;
     font-size: 16px;
     margin: 8px;
+  }
+`
+
+export const OpenDiv = styled.div`
+  background-color: ${colors.lightGray};
+  padding: 16px;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1s ease, opacity 1s ease, visibility 1s ease;
+
+  &.isVisibles {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  span {
+    font-weight: bold;
   }
 `
