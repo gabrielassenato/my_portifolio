@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const MyProjectsContainer = styled.div`
+  scroll-margin-top: 40px;
   background-color: #eee;
   margin-top: 24px;
   border-radius: 74px 22px 74px 22px;
@@ -20,7 +21,7 @@ export const MoreProjectsDiv = styled.div`
   transition: max-height 1s ease, opacity 1s ease, visibility 1s ease;
 
   &.isVisibles {
-    max-height: 1000px;
+    max-height: 2000px;
     opacity: 1;
     visibility: visible;
   }
