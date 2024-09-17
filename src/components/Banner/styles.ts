@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import banner from '../../assets/banner.jpeg'
 
 export const Hero = styled.div`
@@ -49,6 +49,28 @@ export const Content = styled.div`
 
     span {
       font-size: 32px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: block;
+
+    h2 {
+      font-size: 24px;
+      padding: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 0px;
+      margin-right: 24px;
+
+      span {
+        font-size: 24px;
+      }
     }
   }
 `
