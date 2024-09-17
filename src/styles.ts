@@ -9,6 +9,11 @@ export const colors = {
   gray: '#CCCACA'
 }
 
+export const breakpoints = {
+  tablet: '1024px',
+  cellphone: '767px'
+}
+
 export const GlobalCss = createGlobalStyle`
   * {
     margin: 0;
@@ -17,6 +22,7 @@ export const GlobalCss = createGlobalStyle`
     font-family: Bai Jamjuree, sans-serif;
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
   }
 `
 
