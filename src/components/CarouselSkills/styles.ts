@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../styles'
 
 export const CarouselContainer = styled.div`
   display: block;
@@ -31,6 +32,15 @@ export const CarouselItem = styled.div`
 
   img {
     height: 125px;
+  }
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    height: 180px;
+    display: flex;
+
+    img {
+      display: none;
+    }
   }
 `
 
