@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 import Gabriel from '../../assets/eu_5.jpeg'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Card = styled.div`
+  scroll-margin-top: 30px;
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   background-color: ${colors.lightGray};
@@ -11,6 +12,11 @@ export const Card = styled.div`
   border-radius: 50px 0px 0px 0px;
   margin-top: 30px;
   position: relative;
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    display: block;
+    height: 400px;
+  }
 `
 
 export const Text = styled.div`
@@ -21,7 +27,6 @@ export const Text = styled.div`
   h2 {
     display: flex;
     align-items: center;
-    text-align: center;
 
     img {
       height: 42px;
@@ -54,6 +59,26 @@ export const Text = styled.div`
       font-weight: bold;
     }
   }
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    display: block;
+
+    h2 {
+      justify-content: center;
+    }
+
+    ul {
+      display: block;
+      li {
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      justify-content: center;
+      text-align: center;
+    }
+  }
 `
 
 export const Picture = styled.div`
@@ -66,6 +91,10 @@ export const Picture = styled.div`
 
   &:hover div {
     opacity: 1;
+  }
+
+  @media (max-width: ${breakpoints.cellphone}) {
+    display: none;
   }
 `
 
