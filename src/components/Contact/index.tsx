@@ -32,7 +32,10 @@ export const Contact = () => (
       </LinksItem>
     </LinksList>
     <Button>
-      <a href="/assets/cv-gabriel.pdf" download>
+      <a
+        href="https://github.com/gabrielassenato/my_portifolio/blob/main/src/assets/cv-gabriel.pdf"
+        target="blank"
+      >
         Baixar CV
       </a>
     </Button>
