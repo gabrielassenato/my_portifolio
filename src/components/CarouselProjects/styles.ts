@@ -27,6 +27,10 @@ export const AboutProject = styled.div`
   h2 {
     font-size: 28px;
     text-align: center;
+
+    @media (max-width: ${breakpoints.cellphone}) {
+      font-size: 22px;
+    }
   }
 
   p {
@@ -53,6 +57,13 @@ export const VisitTheProject = styled.div`
 
   div {
     display: flex;
+
+    @media (max-width: ${breakpoints.cellphone}) {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 16px;
+    }
   }
 
   button {
@@ -62,6 +73,11 @@ export const VisitTheProject = styled.div`
 
     img {
       height: 20px;
+    }
+
+    @media (max-width: ${breakpoints.cellphone}) {
+      display: block;
+      margin: 8px auto;
     }
   }
 `
