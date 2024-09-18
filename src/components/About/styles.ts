@@ -15,7 +15,7 @@ export const Card = styled.div`
 
   @media (max-width: ${breakpoints.cellphone}) {
     display: block;
-    height: 400px;
+    height: 440px;
   }
 `
 
