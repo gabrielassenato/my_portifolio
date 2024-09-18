@@ -46,6 +46,12 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
 
+  @media (max-width: ${breakpoints.cellphone}) {
+    font-size: 18px;
+    padding: 6px;
+    width: 200px;
+  }
+
   &:hover {
     transition: background-color 1s ease-out;
     background-color: ${colors.darkGreen};
