@@ -39,7 +39,7 @@ export const LinksItem = styled.li`
 
   @media (max-width: ${breakpoints.cellphone}) {
     img {
-      height: 80px;
+      height: 60px;
     }
   }
 `
