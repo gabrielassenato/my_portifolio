@@ -59,17 +59,17 @@ export const Content = styled.div`
     display: block;
 
     h2 {
-      font-size: 24px;
+      font-size: 20px;
       padding: 20px;
     }
 
     p {
-      font-size: 20px;
-      margin-top: 0px;
+      font-size: 18px;
+      margin-top: 12px;
       margin-right: 24px;
 
       span {
-        font-size: 24px;
+        font-size: 20px;
       }
     }
   }
